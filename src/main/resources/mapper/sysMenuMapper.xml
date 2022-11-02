@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rpg.mapper.SysMenuMapper">
+    <select id="getAllMenuLists" resultType="com.rpg.dao.MenuBean">
+        SELECT A.TITLE,
+               A.PATH,
+               B.ACTIVE_PATH AS ACTIVE,
+               b.SELECTED_PATH AS SELECTED
+        FROM RPG_MENU A,
+             RPG_MENU_IMG_INFO B
+        WHERE A.IMG_ID = B.IMG_ID
+    </select>
+
+    <select id="getAllMenu" resultType="com.rpg.entity.RpgMenu">
+        select * from RPG_MENU
+    </select>
+</mapper>

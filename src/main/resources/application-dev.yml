@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: dev
+
+
+  ### mysql
+
+  datasource:
+    url: jdbc:mysql://1.14.110.33:8757/zka_mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: rpg_admin
+    password: rpg_admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    ### oracle
+
+    #  datasource:
+    #    url: jdbc:oracle:thin:@bomc-db:1521:root
+    #    username: root
+    #    password: root
+    #    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+server:
+  port: 25590
+  servlet:
+    context-path: /rpg
+
+
+mybatis:
+  mapper-locations:
+    - classpath:mapper/*.xml
+    - classpath*:com/**/mapper/*.xml
+
+logging:
+  level:
+    root: info
+
+
+
+
+
+
+
+
