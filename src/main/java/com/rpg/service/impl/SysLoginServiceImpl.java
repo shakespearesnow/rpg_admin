@@ -1,4 +1,4 @@
-package com.rpg.impl;
+package com.rpg.service.impl;
 
 import com.rpg.service.SysLoginService;
 import org.springframework.stereotype.Service;

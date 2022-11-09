@@ -1,4 +1,4 @@
-package com.rpg.impl;
+package com.rpg.service.impl;
 
 import com.rpg.dao.MenuBean;
 import com.rpg.entity.RpgMenu;
